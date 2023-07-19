@@ -1,0 +1,39 @@
+{% load static %}
+<!--{% if user.is_authenticated %}-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex" style="justify-content: space-between;">-->
+<!--  <div>-->
+<!--    <img src=" {% static 'hrms/images/favicon.ico' %} " width="30px" alt="">-->
+<!--    <a href="{% url 'hrms:dashboard' %}" class="navbar-brand">AVVENTO MEDIA HRMIS</a>-->
+<!--  </div>-->
+<!--  <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle-navigation">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+<!--  <div class="" id="navbarNav">-->
+<!--    <ul class="navbar-nav navbar-nav-right">-->
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">-->
+<!--          <span class="profile-text"> Hello, {{user.username | upper }}</span>-->
+<!--          <img class="img-xs rounded-circle" src=" {{user.thumb.url}} " alt="Profile image">-->
+<!--        </a>-->
+<!--      <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">-->
+<!--        <a class="dropdown-item" href="{% url 'hrms:logout' %}">-->
+<!--          Log Out-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+<!--{% endif %}-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark d-flex" style="justify-content: space-between;">
+  <div>
+    <img src=" {% static 'hrms/images/favicon.ico' %} " width="30px" alt="">
+    <a href="#" class="navbar-brand">AVVENTO MEDIA HRMIS</a>
+  </div>
+  <div class="d-flex" style="justify-content: space-around; width: 20%;">
+    <a href=" {% url 'hrms:user_login' %} " class="btn btn-primary text-light px-3"> User &rarr; </a>
+    <br>
+    <a href=" {% url 'hrms:application' %} " class="btn btn-info text-light"> We are Hiring !!! </a>
+  </div>
+</nav>
+

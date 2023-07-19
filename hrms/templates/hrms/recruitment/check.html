@@ -1,0 +1,40 @@
+{% extends 'hrms/layout.html' %}
+{% load static %}
+{% block title %} Recruitment | AVVENTO MEDIA HRMIS {% endblock title %}
+      <!--  MAIN BODY START HERE -->
+          {% block content %}
+          <div class="row">
+           <p class="lead text-center">Confirm Recruitment</p>
+            <div class="col-lg-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+
+<!--                    <form method="POST">-->
+<!--                        {% csrf_token %}-->
+
+<!--                        {{ form.as_p }}-->
+<!--                        <br>-->
+<!--                        <button type="submit" class="btn btn-secondary">Confirm</button>-->
+<!--                    </form>-->
+                    <h5><b>Name:</b> {{ applicant.first_name }} {{ applicant.last_name }}</h5>
+                    <br>
+                    <h5><b>Position:</b> {{ applicant.position }}</h5>
+                    <br>
+                    <h5><b>Email:</b> {{ applicant.email }}</h5>
+                    <br>
+                    <h5><b>Phone:</b> {{ applicant.phone }}</h5>
+                    <br>
+                    <div class="" style="width: 500px; height: 800px">
+                        <img src="{{ applicant.cv.url }}" alt="cv" style="width: 500px; height: 800px;">
+                    </div>
+                    <br>
+                    <div class="d-flex" style="width: 20%; justify-content: space-between;">
+                        <a href="{% url 'hrms:recruitmentall' %}" class="btn btn-success">Comfirm</a>
+                        <a href="{% url 'hrms:recruitmentdelete' applicant.id %}" class="btn btn-danger">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endblock content %}

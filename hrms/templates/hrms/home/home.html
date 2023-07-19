@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {% static 'hrms/css/style.css'%} ">
+    <style>
+        .body-bg{
+<!--           background: purple;  /* fallback for old browsers */-->
+<!--            background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */-->
+<!--            background: linear-gradient(to right, purple); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */-->
+                background-color: rgba(0,0,0,.5); background-blend-mode: multiply;
+        }
+        .btn-orange{
+            background: #FDC830;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, yellow, green); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .btn-selenium{
+            background: #0f0c29;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, blue, green); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+    <title>Home</title>
+</head>
+<body class='body-bg' style="background-image: url('{% static 'hrms/images/banner.jpg' %}');
+background-color: rgba(0,0,0,.8); background-blend-mode: multiply; background-attachment: fixed; background-repeat: no-repeat;
+background-size: cover;">
+    {% include 'hrms/navbar.html' %}
+    <section class="container">
+        <div class="row">
+            <div class="text-center text-white" style="width: 80vw; height: 80vh; align-items: center; padding-top: 15%; padding-bottom: 5%;">
+                <img src="{% static 'hrms/images/favicon.ico' %}" width="150px" alt="logo">
+                <h1 class="" style="font-weight: bolder;">WELCOME TO AVVENTO MEDIA HUMAN RESOURCE MANAGEMENT INFORMATION SYSTEM</h1>
+            </div>
+        </div>
+         <div class="card-body">-->
+                <p class="lead text-center text-white">
+                    The Human resource management information System is the strategic approach to the effective management of employees in AVVENTO MEDIA. It is designed to maximize employee performance in service of an employer's strategic objectives.
+                </p><hr>
+            </div>
+    </section>
+    
+    <nav class="navbar navbar-bark text-white bg-dark">
+        <p class="display-4 mx-auto">DEVELOPED BY FINAL YEAR STUDENTS</p>
+    </nav>
+</body>
+</html>
